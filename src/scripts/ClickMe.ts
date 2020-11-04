@@ -4,7 +4,7 @@ export class ClickMe {
   constructor(handler: () => undefined) {
     this.element = document.createElement('div');
     this.element.classList.add('click-me');
-    this.element.innerHTML = 'Нажми<small>Внимание, на странице<br />воспроизводиться звук!</small>';
+    this.element.innerHTML = 'Нажми<small>Внимание, на странице<br />воспроизводится звук!</small>';
     this.element.onclick = handler;
 
     this.element.onclick = () => {
