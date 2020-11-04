@@ -1,0 +1,47 @@
+@mixin xsu-picture-shadow($size: 0.7vmin) {
+  $color: #052525;
+  $alpha: 0.007;
+
+  $shadow: 0vmin -2.5vmin $size * 10 0vmin rgba($color, $alpha * 20);
+
+  @for $i from 0 through 20 {
+    $shadow: $shadow, #{($i / 10 + 0.1) * $size} #{($i / 10 + 1.5) * $size} $size 0vmin rgba($color, $alpha);
+  }
+
+  @for $i from 0 through -20 {
+    $shadow: $shadow, #{($i / 10 + 0.1) * $size} #{($i / -10 + 1.5) * $size} $size 0vmin rgba($color, $alpha);
+  }
+
+  box-shadow: $shadow;
+  margin-top: 3.5 * $size;
+}
+
+.xsu-picture {
+  height: 50vmin;
+  width: 50vmin / 1200 * 675;
+
+  order: 0;
+
+  border-radius: 0.4vmin;
+
+  overflow: hidden;
+
+  background-color: #000;
+
+  @include xsu-picture-shadow();
+}
+
+@media only screen and (orientation: portrait) {
+  .xsu-picture {
+    position: relative;
+
+    border-radius: 0.4vmin;
+
+    height: 50vmax;
+    width: 50vmax / 1200 * 675;
+
+    z-index: 999;
+
+    @include xsu-picture-shadow(3vw);
+  }
+}

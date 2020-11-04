@@ -1,0 +1,23 @@
+@import 'styles/color-imbalance';
+@import 'styles/click-me';
+@import 'styles/xsu-picture';
+@import 'styles/xsu-text';
+
+html, body {
+  margin: 0;
+  padding: 0;
+
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  //background-image: url('~@/images/wallpaper.jpg');
+  background: radial-gradient(transparent, rgba(#052525, 0.4));
+  //background-size: 35%;
+}

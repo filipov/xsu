@@ -1,0 +1,35 @@
+.color-imbalance {
+  animation: color-imbalance-animation .15s .0s ease infinite;
+}
+
+@keyframes color-imbalance-animation {
+  0% {
+    fill: greenyellow;
+    transform: translateX(-1%) translateY(-1%);
+  }
+
+  20% {
+    fill: blue;
+    transform: translateX(1%) translateY(1%);
+  }
+
+  40% {
+    fill: red;
+    transform: translateX(-1%) translateY(1%);
+  }
+
+  60% {
+    fill: greenyellow;
+    transform: translateX(-1%) translateY(-1%);
+  }
+
+  80% {
+    fill: blue;
+    transform: translateX(1%) translateY(-1%);
+  }
+
+  100% {
+    fill: red;
+    transform: translateX(-1%) translateY(1%);
+  }
+}
