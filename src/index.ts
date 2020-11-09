@@ -38,7 +38,7 @@ import audioFile from '@/audio/wild-west.mp3';
                 new XsuPicture(image);
               }
 
-              new XsuText(body, 'git push','origin master', 'origin, slave');
+              new XsuText(body, 'git push','origin master', 'origin dev');
 
               return undefined;
             })
